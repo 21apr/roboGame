@@ -1,0 +1,152 @@
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#openDialog {
+    position: absolute;
+    bottom: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 20px;
+}
+
+#level,
+#score,
+#timer,
+#win>div,
+#gameOver>div {
+    font-size: calc(1rem + 2vw);
+    font-weight: 900;
+    background-color: #BD042C;
+    border-radius: 10px;
+    color: #D3E4AF;
+    padding: 0 10px;
+}
+
+dialog {
+    background: #efe8e2;
+    max-width: 600px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+dialog div {
+    text-align: center;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #D3E4AF;
+    color: black;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+dialog:-internal-dialog-in-top-layer::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.map {
+    width: 100vw;
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.map::before {
+    position: absolute;
+    content: " ";
+    width: inherit;
+    height: 100%;
+    background-image: url(./images/word.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.robotsAria {
+    width: 65%;
+    height: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1200px) {
+    .robotsAria {
+        width: 85%;
+        height: 85%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .robotsAria {
+        width: 90%;
+        height: 90%;
+    }
+
+    .robot {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.robot {
+    width: 7rem;
+    height: 7rem;
+    background-size: cover;
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+#boom {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    filter: sepia(0.5);
+    width: 180px;
+    height: 180px;
+}
+
+#win>div,
+#gameOver>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#win,
+#gameOver {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+}

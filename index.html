@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoboGame</title>
-    <link rel="stylesheet" href="./dist/styles.css" />
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-  </head>
-  <body onclick="handleBodyClick(event)">
-    <div class="menu">
-      <span id="score">0000</span>
-      <span id="level">Level 1</span>
-      <span id="timer">1:00</span>
-    </div>
 
-    <div class="map">
-      <div class="robotsAria"></div>
-    </div>
-    <button id="openDialog" style="display: none">Game Rules</button>
-    <dialog>
-      <h2>Game Rules: Robot Rebellion</h2>
-      <ol>
-        <li>
-          Objective: Suppress the robot uprising by reaching <b>5000 points</b> by the
-          end of the 5th round.
-        </li>
-        <li>Rounds: The game consists of <b>5 levels</b>.</li>
-        <li>
-          Gameplay:
-          <ul>
-            <li>Click on robots to make them explode and earn points.</li>
-            <li>Each round, the robots move faster.</li>
-          </ul>
-        </li>
-        <li>Time Limit: <b>1 minute</b>.</li>
-        <li>
-          Points Requirement: Accumulate the required points within the time
-          limit to proceed to the next round.
-          <ul>
-            <li>
-              To complete the final level (5th round), you need to have 5000
-              points.
-            </li>
-          </ul>
-        </li>
-      </ol>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoboGame</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
 
-      <div>Good luck and stay sharp!</div>
-      <div>
-        <button id="closeDialog">Start game</button>
-      </div>
-    </dialog>
-    <img id="boom" src="./images/boom2.gif" alt="boom" style="display: none" />
-    <div id="gameOver" style="display: none">
-      <div>
-        <p>GAME OVER</p>
-        <button onclick="window.location.reload()">Try Again</button>
-      </div>
+<body onclick="handleBodyClick(event)">
+  <div class="menu">
+    <span id="score">0000</span>
+    <span id="level">Level 1</span>
+    <span id="timer">1:00</span>
+  </div>
+
+  <div class="map">
+    <div class="robotsAria"></div>
+  </div>
+  <button id="openDialog" style="display: none">Game Rules</button>
+  <dialog>
+    <h2>Game Rules: Robot Rebellion</h2>
+    <ol>
+      <li>
+        Objective: Suppress the robot uprising by reaching <b>5000 points</b> by the
+        end of the 5th round.
+      </li>
+      <li>Rounds: The game consists of <b>5 levels</b>.</li>
+      <li>
+        Gameplay:
+        <ul>
+          <li>Click on robots to make them explode and earn points.</li>
+          <li>Each round, the robots move faster.</li>
+        </ul>
+      </li>
+      <li>Time Limit: <b>1 minute</b>.</li>
+      <li>
+        Points Requirement: Accumulate the required points within the time
+        limit to proceed to the next round.
+        <ul>
+          <li>
+            To complete the final level (5th round), you need to have 5000
+            points.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <div>Good luck and stay sharp!</div>
+    <div>
+      <button id="closeDialog">Start game</button>
     </div>
-    <div id="win" style="display: none">
-      <div>
-        <p>YOU WIN !!!</p>
-        <button onclick="window.location.reload()">Try Again</button>
-      </div>
+  </dialog>
+  <img id="boom" src="./images/boom2.gif" alt="boom" style="display: none" />
+  <div id="gameOver" style="display: none">
+    <div>
+      <p>GAME OVER</p>
+      <button onclick="window.location.reload()">Try Again</button>
     </div>
-    <script src="./dist/index.js"></script>
-  </body>
+  </div>
+  <div id="win" style="display: none">
+    <div>
+      <p>YOU WIN !!!</p>
+      <button onclick="window.location.reload()">Try Again</button>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
 </html>
